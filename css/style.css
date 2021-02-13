@@ -98,7 +98,7 @@ canvas {
 .navbar {
   background: #1b242f;
   border-bottom: 2px solid rgb(4, 194, 201);
-  transition: all 0.3s;
+  /* transition: all 0.3s; */
 }
 
 .navbar ul {
@@ -144,6 +144,8 @@ canvas {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
 }
 
 .box {
@@ -195,9 +197,22 @@ canvas {
   align-items: center;
 }
 
-.intro-img img {
-  width: 30vh;
-  height: 30vh;
+.about-img {
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+.about-img img {
+  width: 350px;
+  border: 2px solid rgb(0, 161, 167);
+  padding: 0.1rem;
+  border-radius: 100%;
+  transition: 0.2s;
+}
+
+.about-img:hover img {
+  transform: scale(1.2);
+  filter: grayscale(1);
 }
 
 .intro-img h2 {
@@ -306,7 +321,7 @@ canvas {
 }
 
 .contact-box {
-  width: 40%;
+  width: 80%;
   margin: auto;
 }
 
@@ -374,7 +389,7 @@ footer {
   position: absolute;
   top: -15%;
   left: 50%;
-  transform: translate(0 -50%);
+  transform: translate(-50%, 0);
   background: rgb(227, 27, 109);
   color: #fff;
   width: 3rem;
@@ -529,5 +544,125 @@ p span {
 
   .contact-box {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 572px) {
+  .container {
+    width: 90%;
+  }
+
+  .navbar .container {
+    width: 100%;
+  }
+
+  .navbar ul {
+    justify-content: center;
+  }
+
+  .navbar ul li {
+    padding: 0.8rem;
+  }
+
+  .navbar ul li a {
+    font-size: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero a {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+  }
+
+  .about,
+  .contact {
+    padding: 3rem 0.5rem;
+  }
+
+  .head,
+  .contact .head {
+    font-size: 2rem;
+  }
+
+  .about-box {
+    margin: 5rem 0;
+  }
+
+  .img-container {
+    width: 80px;
+    height: 80px;
+  }
+
+  .about img {
+    width: 40px;
+  }
+
+  .about-box p {
+    margin: 0;
+  }
+
+  .about-img {
+    border-radius: 0;
+  }
+
+  img#about {
+    width: 350px;
+    border-radius: 0;
+  }
+
+  .intro-img p {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 388px) {
+  .navbar ul li a {
+    font-size: 0.7rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero a {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .about-box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .box {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+  }
+
+  .intro-img .btn {
+    padding: 0.5rem 1rem;
+  }
+
+  .intro-box {
+    gap: 0;
+  }
+
+  img#about {
+    border: none;
+    padding: 0 3rem;
+  }
+
+  .contact p {
+    font-size: 1rem;
+  }
+
+  #top {
+    top: -25px;
+  }
+
+  .social a {
+    padding: 1rem;
   }
 }
